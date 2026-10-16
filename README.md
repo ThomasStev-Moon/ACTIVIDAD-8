@@ -54,19 +54,8 @@ convierten en recomendaciones agronómicas.
 ```
 agro-datos-lab/
 ├── README.md                    ← este archivo
-├── AgroDatos_Taller.ipynb       ← cuaderno de Colab con todo el código
-└── docs/
-    ├── ejercicio0_mysql.png
-    ├── lab1_cardinalidades.png
-    ├── lab2_error_check.png
-    ├── lab2_error_unique.png
-    ├── lab2_aplicacion_fechas.png
-    ├── lab3_error_fk.png
-    ├── lab3_error_check.png
-    ├── lab3_retos_completos.png
-    ├── lab4_dron_detecciones.png
-    ├── lab4_recomendacion.png
-    └── lab5_evaluacion.png
+├── ACTIVIDAD_8_COMPLETA.ipynb       ← cuaderno de Colab con todo el código
+
 ```
 
 ---
