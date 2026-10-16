@@ -1,51 +1,72 @@
 # ACTIVIDAD-8
 # 🚜 AgroDatos Lab · Taller de Bases de Datos MySQL
 
+![MySQL](https://img.shields.io/badge/MySQL-8.0.46-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.13-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Google Colab](https://img.shields.io/badge/Google-Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)
+![YOLO](https://img.shields.io/badge/YOLO-v8-111F68?style=for-the-badge&logo=yolo&logoColor=white)
+![Estado](https://img.shields.io/badge/Estado-Completado-2E7D32?style=for-the-badge)
+![Licencia](https://img.shields.io/badge/Licencia-MIT-yellow?style=for-the-badge)
+
 > *"Los datos guardados solo sirven si sabemos hacerles preguntas."*
 
-Taller completo de diseño, normalización y consulta de una base de datos
-para una **empresa agrícola colombiana** con fincas en Cundinamarca, Caldas
-y Boyacá. Cubre DDL, integridad referencial, DML, normalización hasta 3FN
-y visión artificial con YOLO + MySQL.
+Taller completo de diseño, normalización y consulta de una base de datos para una **empresa agrícola colombiana** con fincas en Cundinamarca, Caldas y Boyacá. Cubre **DDL**, **integridad referencial**, **DML**, **normalización hasta 3FN** y **visión artificial con YOLO + MySQL**.
 
 ---
 
 ## 👤 Autor
 
-- **Nombre:** Thomas Stev Arismendi
-- **Institución:** SENA
-- **Programa:** PROGRAMACION DE SOFTWARE
-- **Fecha:** Octubre 2026
+| Campo | Detalle |
+|---|---|
+| **Nombre** | Thomas Stev Arismendi |
+| **Programa** | Programación de Software |
+| **Instructor** | Diego Barragán |
+| **Institución** | SENA |
+| **Fecha** | Octubre 2026 |
 
 ---
 
-## 🎯 Descripción
+## 🎨 Diseño del proyecto
+
+El proyecto se estructura en **6 puntos** progresivos que simulan el ciclo de vida completo de una base de datos para una empresa agrícola:
+
+| # | Etapa | Foco |
+|---|---|---|
+| 1 | **Diseño** | Modelado E-R + DDL con restricciones |
+| 2 | **Integridad** | FK + anexo técnico de insumos |
+| 3 | **Consultas** | DML + JOINs + agregaciones |
+| 4 | **Normalización** | De planilla plana a 3FN |
+| 5 | **Inteligencia artificial** | YOLO + detecciones + recomendación agronómica |
+| 6 | **Evaluación** | Validación final de conceptos |
+
+Cada punto resuelve un problema real del negocio: desde crear la tabla `lote` hasta convertir una detección del dron en una **recomendación de cuánto producto sacar de bodega**.
+
+---
+
+## 📖 Descripción
 
 La empresa **AgroDatos** necesita registrar:
 
-- **Lotes** divididos por fincas en tres departamentos
-- **Insumos** de bodega (fertilizantes, fungicidas, insecticidas, bioinsumos)
-  según su **anexo técnico** oficial
+- **Fincas y lotes** en tres departamentos de Colombia
+- **Insumos de bodega** (fertilizantes, enmiendas, fungicidas, insecticidas, bioinsumos) según su **anexo técnico oficial**
 - **Aplicaciones** en campo (lote + producto + operario + fecha + cantidad)
 - **Detecciones de plagas** realizadas por un dron con **YOLO** (visión artificial)
 
-El proyecto construye paso a paso la base de datos `agro_campo` en MySQL,
-con restricciones de integridad, vistas, triggers y consultas que se
-convierten en recomendaciones agronómicas.
+El proyecto construye paso a paso la base de datos `agro_campo` en **MySQL**, con restricciones de integridad, vistas, triggers y consultas que se convierten en **decisiones agronómicas**.
 
 ---
 
 ## 🛠️ Tecnologías
 
-| Herramienta | Uso |
-|---|---|
-| **MySQL 8.0.46** | Motor de base de datos |
-| **Google Colab** | Entorno de ejecución |
-| **Python 3.13** | Lenguaje anfitrión |
-| **PyMySQL** | Conector MySQL ↔ Python |
-| **Ultralytics YOLOv8** | Detección de objetos |
-| **AgroDatos Lab** | Simulador interactivo (5 laboratorios) |
-| **GitHub** | Control de versiones y entrega |
+| Herramienta | Versión | Uso |
+|---|---|---|
+| **MySQL** | 8.0.46 | Motor de base de datos |
+| **Google Colab** | — | Entorno de ejecución en la nube |
+| **Python** | 3.13 | Lenguaje anfitrión |
+| **PyMySQL** | última | Conector MySQL ↔ Python |
+| **Ultralytics YOLOv8** | v8 | Detección de objetos |
+| **AgroDatos Lab** | 1.0 | Simulador interactivo (5 laboratorios) |
+| **GitHub** | — | Control de versiones y entrega |
 
 ---
 
@@ -54,13 +75,13 @@ convierten en recomendaciones agronómicas.
 ```
 agro-datos-lab/
 ├── README.md                    ← este archivo
-├── ACTIVIDAD_8_COMPLETA.ipynb       ← cuaderno de Colab con todo el código
-
+├── AgroDatos_Taller.ipynb       ← cuaderno de Colab con todo el código
+└── docs/                        ← capturas de pantalla y evidencias
 ```
 
 ---
 
-## 📚 Contenido
+## 📚 Contenido del taller
 
 - [Punto 1 · Modelado y DDL](#punto-1--modelado-y-ddl)
 - [Punto 2 · Integridad referencial e insumos](#punto-2--integridad-referencial-e-insumos)
@@ -75,9 +96,7 @@ agro-datos-lab/
 
 ### 1.1 Ejercicio 0 · Verificación del entorno
 
-Se verificó la versión de MySQL y la hora del servidor desde Colab.
-
-![Ejercicio 0](docs/ejercicio0_mysql.png)
+Se verificó la versión de **MySQL 8.0.46** y la hora del servidor desde Google Colab.
 
 ### 1.2 Modelo Entidad-Relación
 
@@ -86,8 +105,7 @@ Se verificó la versión de MySQL y la hora del servidor desde Colab.
 - **Finca** (`id_finca` PK, nombre, municipio, departamento, altitud_msnm)
 - **Lote** (`id_lote` PK, codigo UK, id_finca FK, cultivo, area_ha, fecha_siembra, estado)
 
-**Cardinalidad principal:** Una finca tiene **muchos** lotes; un lote pertenece
-a **una sola** finca.
+**Cardinalidad principal:** Una finca tiene **muchos** lotes; un lote pertenece a **una sola** finca.
 
 ```mermaid
 erDiagram
@@ -110,9 +128,7 @@ erDiagram
     }
 ```
 
-**Práctica en el simulador:** 5/5 en la actividad de cardinalidades del
-Laboratorio 1.
-
+**Práctica en el simulador:** 5/5 en la actividad de cardinalidades del Laboratorio 1.
 
 ### 1.3 Restricciones de la tabla `lote`
 
@@ -134,7 +150,7 @@ INSERT INTO lote (codigo, id_finca, cultivo, area_ha, fecha_siembra)
 VALUES ('TEST-01', 1, 'papa', -5.00, '2025-05-01');
 ```
 
-**Error:** `(3819, "Check constraint 'chk_area' is violated.")`
+**Error:** `(3819, "Check constraint 'chk_area' is violated.")`  
 **Restricción:** `CHECK (area_ha > 0)`.
 
 #### 🔴 Prueba 1.5 — Código duplicado (UNIQUE)
@@ -144,7 +160,7 @@ INSERT INTO lote (codigo, id_finca, cultivo, area_ha, fecha_siembra)
 VALUES ('ESP-L01', 1, 'maíz', 2.00, '2025-05-02');
 ```
 
-**Error:** `(1062, "Duplicate entry 'ESP-L01' for key 'lote.codigo'")`
+**Error:** `(1062, "Duplicate entry 'ESP-L01' for key 'lote.codigo'")`  
 **Restricción:** `UNIQUE (codigo)`.
 
 #### 🔴 Prueba 1.6 — Campo obligatorio faltante (NOT NULL)
@@ -154,7 +170,7 @@ INSERT INTO lote (codigo, id_finca, area_ha, fecha_siembra)
 VALUES ('TEST-02', 1, 3.00, '2025-05-03');
 ```
 
-**Error:** `(1364, "Field 'cultivo' doesn't have a default value")`
+**Error:** `(1364, "Field 'cultivo' doesn't have a default value")`  
 **Restricción:** `NOT NULL` en `cultivo`.
 
 ### 1.5 RETO 1
@@ -191,10 +207,7 @@ CREATE TABLE operario (
 
 **7. ¿Por qué `area_ha` es `DECIMAL(6,2)` y no `FLOAT`?**
 
-Porque `FLOAT` guarda **aproximaciones binarias** y puede generar errores de
-redondeo (ej. `2.50` se almacenaría como `2.4999999…`). `DECIMAL(6,2)` guarda
-el valor **exacto** con 2 decimales, crítico al calcular dosis por hectárea,
-rendimientos o costos.
+Porque `FLOAT` guarda **aproximaciones binarias** y puede generar errores de redondeo (ej. `2.50` se almacenaría como `2.4999999…`). `DECIMAL(6,2)` guarda el valor **exacto** con 2 decimales, crítico al calcular dosis por hectárea, rendimientos o costos.
 
 **8. Validar en HTML vs `CHECK` en MySQL**
 
@@ -204,16 +217,13 @@ rendimientos o costos.
 | Seguridad | Burlable | Infranqueable |
 | Velocidad | Inmediata | Post-envío |
 
-**Conviene hacer ambas:** HTML mejora la UX con feedback inmediato; CHECK
-garantiza integridad real aunque alguien salte el frontend.
+**Conviene hacer ambas:** HTML mejora la UX con feedback inmediato; CHECK garantiza integridad real aunque alguien salte el frontend.
 
 **9. Desventaja de usar `ENUM` para cultivo**
 
-Si aparece un cultivo nuevo (arroz), hay que hacer `ALTER TABLE` para
-modificar el ENUM, lo cual bloquea la tabla y es rígido.
+Si aparece un cultivo nuevo (arroz), hay que hacer `ALTER TABLE` para modificar el ENUM, lo cual bloquea la tabla y es rígido.
 
-**Alternativa:** tabla catálogo `cultivo (id_cultivo, nombre)` referenciada
-por FK desde `lote`. Agregar un cultivo es un simple `INSERT`.
+**Alternativa:** tabla catálogo `cultivo (id_cultivo, nombre)` referenciada por FK desde `lote`. Agregar un cultivo es un simple `INSERT`.
 
 ---
 
@@ -236,8 +246,7 @@ CREATE TABLE aplicacion (
 
 - **`fk_apl_lote`** impide registrar aplicaciones en lotes inexistentes.
 - **`fk_apl_producto`** impide aplicar productos que no están en bodega.
-- **`ON DELETE RESTRICT`** impide borrar un padre con hijos. Protege
-  trazabilidad: no puedes borrar un lote si tiene aplicaciones.
+- **`ON DELETE RESTRICT`** impide borrar un padre con hijos. Protege trazabilidad: no puedes borrar un lote si tiene aplicaciones.
 
 **Relación N:M lote ↔ producto** resuelta con `aplicacion`:
 
@@ -267,7 +276,7 @@ INSERT INTO aplicacion (id_lote, id_producto, fecha, cantidad)
 VALUES (99, 1, '2026-05-15', 10);
 ```
 
-**Error:** `(1452, "Cannot add or update a child row: a foreign key constraint fails")`
+**Error:** `(1452, "Cannot add or update a child row: a foreign key constraint fails")`  
 **Restricción:** `fk_apl_lote` protegió la integridad referencial.
 
 ### 2.4 RETO 2A · Insertar productos restantes
@@ -312,24 +321,18 @@ ORDER BY a.fecha;
 
 **7. Error al insertar aplicación en lote 99**
 
-`Error 1452` — el motor rechazó la fila por la llave foránea.
-**Sin FK en una web:** se guardarían aplicaciones huérfanas que romperían
-reportes y JOINs.
+`Error 1452` — el motor rechazó la fila por la llave foránea.  
+**Sin FK en una web:** se guardarían aplicaciones huérfanas que romperían reportes y JOINs.
 
 **8. ¿Por qué no se pudo borrar la finca 1?**
 
-Porque `lote` tiene `ON DELETE RESTRICT` referenciando a `finca`, y la finca 1
-tiene lotes hijos.
+Porque `lote` tiene `ON DELETE RESTRICT` referenciando a `finca`, y la finca 1 tiene lotes hijos.
 
-**Caso para `ON DELETE CASCADE`:** al borrar una `imagen`, que se borren
-automáticamente sus `detecciones` asociadas (datos derivados que no tienen
-sentido sin la imagen).
+**Caso para `ON DELETE CASCADE`:** al borrar una `imagen`, que se borren automáticamente sus `detecciones` asociadas (datos derivados que no tienen sentido sin la imagen).
 
 **9. Categoría toxicológica equivocada aceptada por el motor**
 
-Porque `CHECK` solo verifica que el valor esté dentro del dominio (I, II, III,
-IV), pero no puede saber cuál es el correcto para ese producto. La BD no "lee"
-el anexo técnico.
+Porque `CHECK` solo verifica que el valor esté dentro del dominio (I, II, III, IV), pero no puede saber cuál es el correcto para ese producto. La BD no "lee" el anexo técnico.
 
 **Controles en la web:**
 - Validación cruzada contra registro ICA oficial
@@ -372,8 +375,7 @@ CASE
 END AS diagnostico
 ```
 
-Compara la **cantidad real aplicada** contra la **dosis esperada**
-(área × dosis anexo) y emite diagnóstico con margen de tolerancia ±10 %.
+Compara la **cantidad real aplicada** contra la **dosis esperada** (área × dosis anexo) y emite diagnóstico con margen de tolerancia ±10 %.
 
 ### 3.3 RETO 3
 
@@ -422,15 +424,11 @@ ORDER BY kg_aplicados DESC LIMIT 1;
 
 **5. LEFT JOIN vs JOIN en 3.3**
 
-Con `INNER JOIN` la consulta devolvería 0 filas (por el `WHERE IS NULL`).
-El `LEFT JOIN` conserva todos los lotes y rellena con NULL los sin aplicación.
-Es la técnica **anti-join** para encontrar "lo que falta".
+Con `INNER JOIN` la consulta devolvería 0 filas (por el `WHERE IS NULL`). El `LEFT JOIN` conserva todos los lotes y rellena con NULL los sin aplicación. Es la técnica **anti-join** para encontrar "lo que falta".
 
 **6. ¿Por qué `GROUP BY l.codigo, l.cultivo` además de `l.id_lote`?**
 
-Porque en MySQL 8 con `ONLY_FULL_GROUP_BY` (por defecto), toda columna del
-SELECT que no esté en función de agregado debe declararse en el GROUP BY.
-`l.codigo` y `l.cultivo` no son agregados → van obligatoriamente.
+Porque en MySQL 8 con `ONLY_FULL_GROUP_BY` (por defecto), toda columna del SELECT que no esté en función de agregado debe declararse en el GROUP BY. `l.codigo` y `l.cultivo` no son agregados → van obligatoriamente.
 
 **7. Costo por hectárea: SQL o JavaScript**
 
@@ -439,8 +437,7 @@ SELECT que no esté en función de agregado debe declararse en el GROUP BY.
 - **Seguridad:** JS expone datos crudos; SQL filtra por rol
 - **Consistencia:** todos los usuarios ven el mismo cálculo
 
-**Excepción:** cálculos interactivos (sliders) pueden precalcular en SQL y
-ajustar deltas en JS.
+**Excepción:** cálculos interactivos (sliders) pueden precalcular en SQL y ajustar deltas en JS.
 
 ---
 
@@ -448,11 +445,9 @@ ajustar deltas en JS.
 
 ### 4.1 Anomalías detectadas en `planilla_campo`
 
-- **Actualización:** operario `1012345678` con dos teléfonos distintos
-  (filas 1-4 con `3105557788`, fila 7 con `9999999999`)
+- **Actualización:** operario `1012345678` con dos teléfonos distintos (filas 1-4 con `3105557788`, fila 7 con `9999999999`)
 - **Inserción:** no se puede registrar un operario sin asignarle una aplicación
-- **Borrado:** al borrar la única aplicación de `BioLarva WP`, se pierde toda
-  la información del producto
+- **Borrado:** al borrar la única aplicación de `BioLarva WP`, se pierde toda la información del producto
 
 ### 4.2 Consulta de auditoría
 
@@ -465,15 +460,13 @@ GROUP BY documento_operario, nombre_operario
 HAVING COUNT(DISTINCT telefono_operario) > 1;
 ```
 
-Detecta la **huella digital de la anomalía de actualización**: un dato repetido
-que cambia solo en algunas filas.
+Detecta la **huella digital de la anomalía de actualización**: un dato repetido que cambia solo en algunas filas.
 
 ### 4.3 Dependencia transitiva eliminada
 
 En la planilla: `fila → documento_operario → nombre_operario, telefono`
 
-Al crear `operario_n` con `documento` como PK, los datos del operario viven en
-**un solo lugar** y se referencian por FK. **3FN alcanzada.**
+Al crear `operario_n` con `documento` como PK, los datos del operario viven en **un solo lugar** y se referencian por FK. **3FN alcanzada.**
 
 ### 4.4 RETO 4
 
@@ -551,13 +544,11 @@ erDiagram
 
 **6. ¿De qué depende `categoria_tox`?**
 
-Del **producto**, no de la aplicación. Violaba **2FN** (dependencia parcial):
-`categoria_tox` no dependía de la PK de la aplicación, sino del producto.
+Del **producto**, no de la aplicación. Violaba **2FN** (dependencia parcial): `categoria_tox` no dependía de la PK de la aplicación, sino del producto.
 
 **7. ¿`observaciones` cumple 1FN?**
 
-**No**, contiene valores no atómicos (`"cogollero en 30% de plantas"` mezcla
-tipo, porcentaje y unidad).
+**No**, contiene valores no atómicos (`"cogollero en 30% de plantas"` mezcla tipo, porcentaje y unidad).
 
 **Rediseño:**
 
@@ -575,10 +566,7 @@ CREATE TABLE observacion_plaga (
 
 **8. ¿Cuándo desnormalizar a propósito?**
 
-Cuando la **performance de lectura** importa más que la consistencia perfecta.
-Ejemplo: dashboards con miles de consultas diarias → tabla de resumen
-precalculada. **Regla:** es una decisión consciente y documentada, no un
-accidente.
+Cuando la **performance de lectura** importa más que la consistencia perfecta. Ejemplo: dashboards con miles de consultas diarias → tabla de resumen precalculada. **Regla:** es una decisión consciente y documentada, no un accidente.
 
 ---
 
@@ -596,21 +584,18 @@ erDiagram
 
 **¿Por qué `deteccion` no guarda `codigo_lote`?**
 
-Porque ya lo tiene vía `imagen.id_lote`. Guardarlo sería redundante (viola 3FN)
-y crearía una anomalía de actualización. Se obtiene con JOIN cuando se necesite.
+Porque ya lo tiene vía `imagen.id_lote`. Guardarlo sería redundante (viola 3FN) y crearía una anomalía de actualización. Se obtiene con JOIN cuando se necesite.
 
 ### 5.2 YOLO real · Detecciones guardadas
 
-Con `SUBIR_FOTO = True` se subió una imagen y se guardaron las detecciones en
-`imagen` y `deteccion` (coordenadas normalizadas 0-1).
+Con `SUBIR_FOTO = True` se subió una imagen y se guardaron las detecciones en `imagen` y `deteccion` (coordenadas normalizadas 0-1).
 
-**Nota:** el modelo COCO detectó clases genéricas (broccoli, person...) porque
-no conoce plagas reales. Para producción se necesita un modelo entrenado.
+**Nota:** el modelo COCO detectó clases genéricas (broccoli, person...) porque no conoce plagas reales. Para producción se necesita un modelo entrenado.
 
 ### 5.3 Simulación de 30 vuelos
 
 - **Imágenes guardadas:** 30
-- **Detecciones guardadas:** *(ver captura)*
+- **Detecciones guardadas:** (cantidad variable)
 - **Modelo:** `yolo-agro-v1`
 
 ### 5.4 Vista `v_recomendacion`
@@ -734,20 +719,4 @@ ORDER BY clase, modelo;
 
 ### 5.7 Práctica en simulador · Laboratorio 3
 
-3 vuelos sobre lotes de diferentes cultivos. Tabla registrada:
-
-| Lote | Cultivo | Umbral | Precisión | Recall |
-|---|---|---|---|---|
-| ESP-L01 | papa | 0.25 | *(ver captura)* | *(ver captura)* |
-| ESP-L01 | papa | 0.45 | *(ver captura)* | *(ver captura)* |
-| ESP-L01 | papa | 0.80 | *(ver captura)* | *(ver captura)* |
-
-### 5.8 Reflexiones
-
-**8. Clasificación vs detección**
-
-- **Clasificación:** una etiqueta para toda la imagen
-- **Detección:** qué + dónde, para cada objeto
-
-Para contar gusanos por planta se necesita **detección**: necesitas saber
-cuántos hay y dónde están
+3 vuelos sobre lotes de diferentes cultivos, recorriendo las 4 etapas (cuadrícula, candidatas, umbral, NMS
