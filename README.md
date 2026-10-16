@@ -113,7 +113,6 @@ erDiagram
 **Práctica en el simulador:** 5/5 en la actividad de cardinalidades del
 Laboratorio 1.
 
-![Lab 1 · 5/5](docs/lab1_cardinalidades.png)
 
 ### 1.3 Restricciones de la tabla `lote`
 
