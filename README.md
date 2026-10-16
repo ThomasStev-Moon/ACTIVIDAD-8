@@ -418,8 +418,6 @@ ORDER BY kg_aplicados DESC LIMIT 1;
 
 6 retos resueltos correctamente. Errores de FK y CHECK comparados con MySQL.
 
-![Lab 4 · retos completos](docs/lab3_retos_completos.png)
-
 ### 3.5 Reflexiones
 
 **5. LEFT JOIN vs JOIN en 3.3**
@@ -743,9 +741,6 @@ ORDER BY clase, modelo;
 | ESP-L01 | papa | 0.25 | *(ver captura)* | *(ver captura)* |
 | ESP-L01 | papa | 0.45 | *(ver captura)* | *(ver captura)* |
 | ESP-L01 | papa | 0.80 | *(ver captura)* | *(ver captura)* |
-
-![Lab 3 · dron y detecciones](docs/lab4_dron_detecciones.png)
-![Lab 3 · recomendación agronómica](docs/lab4_recomendacion.png)
 
 ### 5.8 Reflexiones
 
